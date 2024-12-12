@@ -6,7 +6,7 @@ export const databaseConfig: TypeOrmModuleOptions = {
   port: 5432,
   username: 'your_username',
   password: 'your_password',
-  database: 'parking_api',
+  database: 'parking-api',
   entities: [__dirname + '/../**/*.entity{.ts,.js}'],
   synchronize: true,
 };
