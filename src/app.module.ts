@@ -10,6 +10,7 @@ import { Vehicle } from './vehicles/vehicle.entity';
 import { ParkingSpot } from './parking-spots/parking-spot.entity';
 import { Reservation } from './reservations/reservation.entity';
 import { Log } from './logs/log.entity';
+import { VehicleModule } from './vehicles/vehicle.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { Log } from './logs/log.entity';
     }),
     AuthModule,
     UserModule,
+    VehicleModule
   ],
   controllers: [
     AppController],

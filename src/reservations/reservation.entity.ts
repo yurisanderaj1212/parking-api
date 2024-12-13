@@ -17,7 +17,9 @@ export class Reservation {
   @ManyToOne(() => User, user => user.reservations)
   user: User;
 
-  @ManyToOne(() => Vehicle)
+  @ManyToOne(() => Vehicle, (vehicle) => vehicle, {
+    onDelete: 'CASCADE', // Permite la eliminación en cascada
+  })
   vehicle: Vehicle;
 
   @ManyToOne(() => ParkingSpot, parkingSpot => parkingSpot.reservations)
