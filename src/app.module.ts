@@ -13,6 +13,7 @@ import { Log } from './logs/log.entity';
 import { VehicleModule } from './vehicles/vehicle.module';
 import { ParkingSpotModule } from './parking-spots/parking-spot.module';
 import { ReservationModule } from './reservations/reservation.module';
+import { LogModule } from './logs/log.module';
 
 @Module({
   imports: [
@@ -24,7 +25,8 @@ import { ReservationModule } from './reservations/reservation.module';
     UserModule,
     VehicleModule,
     ParkingSpotModule,
-    ReservationModule
+    ReservationModule,
+    LogModule
   ],
   controllers: [
     AppController],
