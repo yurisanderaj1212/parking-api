@@ -1,3 +1,4 @@
+import { UserModule } from './users/user.module';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
@@ -12,13 +13,18 @@ import { Log } from './logs/log.entity';
 
 @Module({
   imports: [
+    
+
     TypeOrmModule.forRoot({
       ...databaseConfig,
       entities: [User, Vehicle, ParkingSpot, Reservation, Log],
     }),
     AuthModule,
+    UserModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [
+    AppController],
+  providers: [
+    AppService],
 })
-export class AppModule {}
+export class AppModule { }

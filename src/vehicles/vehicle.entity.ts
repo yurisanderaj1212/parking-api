@@ -6,7 +6,7 @@ export class Vehicle {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column( {unique: true} )
+  @Column()
   licensePlate: string;
 
   @Column()
