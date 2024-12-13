@@ -4,7 +4,6 @@ import * as bcryptjs from 'bcryptjs';
 import { UserService } from 'src/users/user.service';
 import { RegisterDto } from './dto/register.dto';
 import { LoginDto } from './dto/login.dto';
-import { Roles } from './decorators/roles.decorator';
 
 @Injectable()
 export class AuthService {
@@ -40,21 +39,17 @@ export class AuthService {
       throw new UnauthorizedException('password is wrong');
     }
 
-    const payload = { email: user.email , role: user.role };
+    const payload = { email: user.email, role: user.role };
 
     const token = await this.jwtService.signAsync(payload);
 
 
-    return {
-      token,
-      email
-    }
-   
+    return { token, email }
 
   }
 
-  async profile({email , role}: {email: string, role:string }) {
+  async profile({ email, role }: { email: string, role: string }) {
     return await this.userService.findOneByEmail(email);
-   }
+  }
 
 }

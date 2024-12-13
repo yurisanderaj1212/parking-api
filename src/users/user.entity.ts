@@ -10,13 +10,13 @@ export class User {
   @Column()
   username: string;
 
-  @Column({nullable: false})
+  @Column({ nullable: false })
   password: string;
 
-  @Column({unique: true , nullable: false})
+  @Column({ unique: true, nullable: false })
   email: string;
 
-  @Column({nullable: true})
+  @Column({ nullable: true })
   phoneNumber: string;
 
   @Column({
@@ -31,5 +31,5 @@ export class User {
 
   @OneToMany(() => Vehicle, vehicle => vehicle.owner)
   vehicles: Vehicle[];
-    
+
 }

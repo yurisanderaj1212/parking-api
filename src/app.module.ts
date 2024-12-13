@@ -13,8 +13,6 @@ import { Log } from './logs/log.entity';
 
 @Module({
   imports: [
-    
-
     TypeOrmModule.forRoot({
       ...databaseConfig,
       entities: [User, Vehicle, ParkingSpot, Reservation, Log],

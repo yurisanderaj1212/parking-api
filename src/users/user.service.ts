@@ -9,7 +9,7 @@ export class UserService {
   constructor(
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
-  ) {}
+  ) { }
 
   async createUser(createUserDto: CreateUserDto) {
     return this.userRepository.save(createUserDto);
@@ -27,7 +27,7 @@ export class UserService {
     await this.userRepository.delete(id);
   }
 
-  findOneByEmail(email: string){
-   return this.userRepository.findOneBy({email})
+  findOneByEmail(email: string) {
+    return this.userRepository.findOneBy({ email })
   }
 }

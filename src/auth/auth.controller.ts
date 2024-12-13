@@ -1,14 +1,9 @@
 import { Controller, Post, UseGuards, Body, Get, Request } from '@nestjs/common';
-import { AuthGuard } from './guard/auth.guard';
 import { AuthService } from './auth.service';
 import { RegisterDto } from './dto/register.dto';
 import { LoginDto } from './dto/login.dto';
-import { Roles } from './decorators/roles.decorator';
-import { RolesGuard } from './guard/roles.guard';
 import { Role } from './enums/role.enum';
 import { Auth } from './decorators/auth.decorator';
-
-
 
 interface RequestWithUser extends Request {
   user: {
