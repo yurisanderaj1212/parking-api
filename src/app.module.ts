@@ -11,6 +11,7 @@ import { ParkingSpot } from './parking-spots/parking-spot.entity';
 import { Reservation } from './reservations/reservation.entity';
 import { Log } from './logs/log.entity';
 import { VehicleModule } from './vehicles/vehicle.module';
+import { ParkingSpotModule } from './parking-spots/parking-spot.module';
 
 @Module({
   imports: [
@@ -20,7 +21,8 @@ import { VehicleModule } from './vehicles/vehicle.module';
     }),
     AuthModule,
     UserModule,
-    VehicleModule
+    VehicleModule,
+    ParkingSpotModule
   ],
   controllers: [
     AppController],

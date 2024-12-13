@@ -9,9 +9,10 @@ export class ParkingSpot {
   @Column()
   spotNumber: string;
 
-  @Column()
+  @Column({nullable : false})
   isOccupied: boolean;
 
   @OneToMany(() => Reservation, reservation => reservation.parkingSpot)
   reservations: Reservation[];
 }
+
